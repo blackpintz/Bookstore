@@ -1,6 +1,6 @@
 # Bookstore
 
-![Linters](https://github.com/bluette1/Bookstore/workflows/Linters/badge.svg)
+![Linters](https://github.com/blackpintz/Bookstore/workflows/Linters/badge.svg)
 
 ## Project description
 A simple bookstore application built using React and Redux.
