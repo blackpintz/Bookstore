@@ -19,7 +19,6 @@
       "react/react-in-jsx-scope": "off",
       "import/no-unresolved": "off",
       "no-shadow": "off",
-      "react/jsx-props-no-spreading": "off",
       "arrow-parens": ["error", "as-needed"]
     },
     "ignorePatterns": [
