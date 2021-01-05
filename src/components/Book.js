@@ -12,13 +12,13 @@ const Book = ({ id, title, category }) => (
 );
 
 Book.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string,
   title: PropTypes.string,
   category: PropTypes.string,
 };
 
 Book.defaultProps = {
-  id: 0,
+  id: '0',
   title: 'no title',
   category: 'no category',
 };

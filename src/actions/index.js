@@ -9,7 +9,7 @@ function getRandomIntInclusive(lower, upper) {
 export const createBook = book => ({
   type: CREATE_BOOK,
   book: {
-    id: getRandomIntInclusive(1, 100),
+    id: getRandomIntInclusive(1, 100).toString(),
     ...book,
   },
 });
