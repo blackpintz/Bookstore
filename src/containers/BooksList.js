@@ -28,7 +28,7 @@ const mapStateToProps = state => ({
 });
 
 BooksList.propTypes = {
-  books: PropTypes.arrayOf(PropTypes.string),
+  books: PropTypes.arrayOf(PropTypes.object),
 };
 
 BooksList.defaultProps = {
