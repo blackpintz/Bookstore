@@ -24,7 +24,7 @@ class BooksForm extends React.Component {
       // dispatches actions to add or remove a book
       const { props: { createBook } } = this;
       const { state: { title, category } } = this;
-      createBook({title, category});
+      createBook({ title, category });
       // sets state back to initial values
       this.setState({ title: '', category: '' });
     };

@@ -10,7 +10,7 @@ export const createBook = book => ({
   type: CREATE_BOOK,
   book: {
     id: getRandomIntInclusive(1, 100),
-    ...book
+    ...book,
   },
 });
 
