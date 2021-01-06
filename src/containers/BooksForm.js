@@ -10,9 +10,9 @@ class BooksForm extends React.Component {
     this.state = { title: '', category: '--Please choose a category--' };
   }
 
-    handleChange = e => {
+    handleChange = ({ target: { name, value } }) => {
       this.setState({
-        [e.target.name]: e.target.value,
+        [name]: value,
       });
     }
 
