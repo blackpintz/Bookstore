@@ -19,7 +19,7 @@ const booksReducer = (state = [], action) => {
       ];
     }
     case REMOVE_BOOK: {
-      const { book } = action.book;
+      const { book } = action;
       const books = [...state];
       return findAndDeleteBook(books, book.id);
     }
