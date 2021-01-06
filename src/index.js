@@ -4,6 +4,10 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './components/App';
 import store from './store';
+import { createBook } from './actions/index';
+
+store.dispatch(createBook({ title: 'Water', category: 'Kids' }));
+store.dispatch(createBook({ title: 'Little mermaid', category: 'Action' }));
 
 ReactDOM.render(
   <Provider store={store}>

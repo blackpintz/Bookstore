@@ -25,10 +25,4 @@ Book.propTypes = {
   handleRemoveBook: PropTypes.func.isRequired,
 };
 
-Book.defaultProps = {
-  id: '0',
-  title: 'no title',
-  category: 'no category',
-};
-
 export default Book;

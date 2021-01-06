@@ -2,9 +2,21 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import { removeBook } from '../actions/index';
 
-const BooksList = props => {
-  const { books } = props;
+// class BooksList extends React.Component {
+//   constructor(props) {
+//     super(props);
+//   }
+
+//   render() {
+
+//   }
+// }
+const BooksList = ({ books, dispatch }) => {
+  const handleRemoveBook = book => {
+    dispatch(removeBook(book));
+  };
   return (
     <div>
       <p>Table with colgroup</p>
@@ -15,6 +27,7 @@ const BooksList = props => {
             <th>ID</th>
             <th>Title</th>
             <th>Category</th>
+            <th>Action</th>
           </tr>
           {books.map(book => <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />)}
         </tbody>
@@ -29,6 +42,7 @@ const mapStateToProps = state => ({
 
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.object),
+  dispatch: PropTypes.func.isRequired,
 };
 
 BooksList.defaultProps = {
