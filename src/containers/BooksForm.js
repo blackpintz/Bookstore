@@ -7,20 +7,17 @@ import { createBook } from '../actions/index';
 class BooksForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { title: '', category: '' };
-    this.updateCategory = this.updateCategory.bind(this);
-    this.updateTitle = this.updateTitle.bind(this);
+    this.state = { title: '', category: '--Please choose a category--' };
   }
 
-    updateTitle = title => {
-      this.setState({ title });
-    };
+    handleChange = ({ target: { name, value } }) => {
+      this.setState({
+        [name]: value,
+      });
+    }
 
-    updateCategory = category => {
-      this.setState({ category });
-    };
-
-    handleCreateBook = () => {
+    handleCreateBook = e => {
+      e.preventDefault();
       // dispatches actions to add or remove a book
       const { props: { createBook } } = this;
       const { state: { title, category } } = this;
@@ -30,24 +27,25 @@ class BooksForm extends React.Component {
     };
 
     render() {
-      const { state: { title } } = this;
+      const { state: { title, category } } = this;
       return (
-        <div>
+        <form onSubmit={this.handleCreateBook}>
           <input
-            onChange={e => this.updateTitle(e.target.value)}
+            name="title"
+            onChange={this.handleChange}
             value={title}
           />
           <label htmlFor="book-select">
             Choose a category:
             <select
-              name="book-categories"
+              name="category"
               id="book-select"
-              onChange={e => this.updateCategory(e.target.value)}
+              value={category}
+              onChange={this.handleChange}
             >
-              <option>--Please choose a category--</option>
               {BOOK_CATEGORIES.map(option => (
-                <option key={option} value={option}>
-                  {option}
+                <option key={option}>
+                  {option === '' ? '--Please choose a category--' : option}
                 </option>
               ))}
               ;
@@ -55,14 +53,13 @@ class BooksForm extends React.Component {
           </label>
           <div className="submitBtn">
             <button
-              type="button"
+              type="submit"
               className="submit"
-              onClick={this.handleCreateBook}
             >
               Add Book
             </button>
           </div>
-        </div>
+        </form>
       );
     }
 }
