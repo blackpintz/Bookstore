@@ -16,7 +16,7 @@ const BooksList = props => {
             <th>Title</th>
             <th>Category</th>
           </tr>
-          {books.map(b => <Book key={b.id} category={b.category} id={b.id} title={b.title} />)}
+          {books.map(book => <Book key={book.id} book={book} handleRemoveBook={handleRemoveBook} />)}
         </tbody>
       </table>
     </div>
