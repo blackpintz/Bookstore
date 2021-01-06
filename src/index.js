@@ -6,7 +6,7 @@ import App from './components/App';
 import store from './store';
 import { createBook } from './actions/index';
 
-store.dispatch(createBook({ title: 'Water', category: 'Kids' }));
+store.dispatch(createBook({ title: 'Water', category: 'History' }));
 store.dispatch(createBook({ title: 'Little mermaid', category: 'Action' }));
 
 ReactDOM.render(
