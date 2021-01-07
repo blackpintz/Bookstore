@@ -7,7 +7,6 @@ import filteredBooks from '../selectors/filteredBooks';
 
 const BooksList = ({ books, removeBook }) => (
   <div>
-    <p>Table with colgroup</p>
     <table>
       <colgroup span="4" />
       <tbody>

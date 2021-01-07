@@ -29,8 +29,10 @@ class BooksForm extends React.Component {
     render() {
       const { state: { title, category } } = this;
       return (
-        <form onSubmit={this.handleCreateBook}>
+        <form className="form" onSubmit={this.handleCreateBook}>
+
           <input
+            placeholder="title"
             name="title"
             onChange={this.handleChange}
             value={title}

@@ -7,7 +7,8 @@ import { changeFilter } from '../actions/index';
 const bookCategories = ['All', ...BOOK_CATEGORIES];
 
 const CategoryFilter = ({ handleFilterChange }) => (
-  <div>
+  <div className="category-filter">
+    <p>Filter books according to category</p>
     <select
       onChange={e => handleFilterChange(e.target.value)}
     >
