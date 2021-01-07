@@ -2,27 +2,26 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import BOOK_CATEGORIES from '../constants';
+import { changeFilter } from '../actions/index';
 
-const CategoryFilter = ({ filter }) => (
+const bookCategories = ['All', ...BOOK_CATEGORIES];
+
+const CategoryFilter = ({ handleFilterChange }) => (
   <div>
     <select
-      value={filter.filter}
+      onChange={e => handleFilterChange(e.target.value)}
     >
-      {BOOK_CATEGORIES.map(option => (
-        <option key={option}>
-          {option === '' ? filter.filter : option}
+      {bookCategories.map(option => (
+        <option key={option} value={option}>
+          {option}
         </option>
       ))}
     </select>
   </div>
 );
 
-const mapStateToProps = state => ({
-  filter: state.filter,
-});
-
 CategoryFilter.propTypes = {
-  filter: PropTypes.objectOf(PropTypes.string).isRequired,
+  handleFilterChange: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps)(CategoryFilter);
+export default connect(null, { handleFilterChange: changeFilter })(CategoryFilter);

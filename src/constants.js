@@ -1,5 +1,4 @@
 const BOOK_CATEGORIES = [
-  '',
   'Action',
   'Biography',
   'History',
