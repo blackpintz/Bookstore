@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import BOOK_CATEGORIES from '../constants';
 import { createBook } from '../actions/index';
+import '../css/BooksForm.css';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -29,39 +30,39 @@ class BooksForm extends React.Component {
     render() {
       const { state: { title, category } } = this;
       return (
-        <form className="form" onSubmit={this.handleCreateBook}>
+        <div className="BooksForm">
+          <h1>ADD NEW BOOK</h1>
+          <form className="form" onSubmit={this.handleCreateBook}>
 
-          <input
-            placeholder="title"
-            name="title"
-            onChange={this.handleChange}
-            value={title}
-          />
-          <label htmlFor="book-select">
-            Choose a category:
-            <select
-              name="category"
-              id="book-select"
-              value={category}
+            <input
+              placeholder="Book title"
+              name="title"
               onChange={this.handleChange}
-            >
-              {BOOK_CATEGORIES.map(option => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-              ;
-            </select>
-          </label>
-          <div className="submitBtn">
+              value={title}
+            />
+            <div className="custom-select">
+              <select
+                name="category"
+                value={category}
+                onChange={this.handleChange}
+              >
+                {BOOK_CATEGORIES.map(option => (
+                  <option key={option} value={option}>
+                    {option}
+                  </option>
+                ))}
+                ;
+              </select>
+              <span className="custom-arrow" />
+            </div>
             <button
               type="submit"
               className="submit"
             >
-              Add Book
+              ADD BOOK
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       );
     }
 }
