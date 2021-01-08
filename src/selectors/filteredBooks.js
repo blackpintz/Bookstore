@@ -1,3 +1,3 @@
-const filteredBooks = (books, filter) => (filter !== 'All' ? (books.filter(book => book.category === filter)) : books);
+const filteredBooks = (books, filter) => (filter !== 'All' && filter !== 'CATEGORIES' ? (books.filter(book => book.category === filter)) : books);
 
 export default filteredBooks;

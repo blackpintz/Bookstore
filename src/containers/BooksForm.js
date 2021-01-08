@@ -37,6 +37,7 @@ class BooksForm extends React.Component {
             <input
               placeholder="Book title"
               name="title"
+              className="input-title"
               onChange={this.handleChange}
               value={title}
             />

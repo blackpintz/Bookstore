@@ -1,6 +1,8 @@
 .Nav {
   display: flex;
-  width: 80%;
+  padding-right: 100px;
+  padding-left: 100px;
+  justify-content: space-between;
 }
 
 .Nav section {
@@ -57,5 +59,27 @@
   border: solid 0.5px;
   padding: 5px;
   border-radius: 50%;
-  margin-top: 2px;
+  margin-top: 18px;
+}
+
+.category-filter {
+  padding-top: 18px;
+  padding-bottom: 30px;
+}
+
+.Nav select {
+  padding-right: 10px;
+  margin-right: 50px;
+  height: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  cursor: pointer;
+  width: 135px;
+  padding-top: unset;
 }

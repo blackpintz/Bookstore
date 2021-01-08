@@ -8,10 +8,10 @@ const bookCategories = ['All', ...BOOK_CATEGORIES];
 
 const CategoryFilter = ({ handleFilterChange }) => (
   <div className="category-filter">
-    <p>Filter books according to category</p>
     <select
       onChange={e => handleFilterChange(e.target.value)}
     >
+      <option>CATEGORIES</option>
       {bookCategories.map(option => (
         <option key={option} value={option}>
           {option}
