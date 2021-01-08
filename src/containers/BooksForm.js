@@ -7,7 +7,7 @@ import { createBook } from '../actions/index';
 class BooksForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { title: '', category: '--Please choose a category--' };
+    this.state = { title: '', category: BOOK_CATEGORIES[0] };
   }
 
     handleChange = ({ target: { name, value } }) => {
@@ -23,14 +23,16 @@ class BooksForm extends React.Component {
       const { state: { title, category } } = this;
       createBook({ title, category });
       // sets state back to initial values
-      this.setState({ title: '', category: '' });
+      this.setState({ title: '', category: BOOK_CATEGORIES[0] });
     };
 
     render() {
       const { state: { title, category } } = this;
       return (
-        <form onSubmit={this.handleCreateBook}>
+        <form className="form" onSubmit={this.handleCreateBook}>
+
           <input
+            placeholder="title"
             name="title"
             onChange={this.handleChange}
             value={title}
@@ -44,8 +46,8 @@ class BooksForm extends React.Component {
               onChange={this.handleChange}
             >
               {BOOK_CATEGORIES.map(option => (
-                <option key={option}>
-                  {option === '' ? '--Please choose a category--' : option}
+                <option key={option} value={option}>
+                  {option}
                 </option>
               ))}
               ;
