@@ -85,6 +85,14 @@
   color: #4386bf;
 }
 
+.comments-section li {
+  margin-right: 3px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-right: 12px;
+  cursor: pointer;
+}
+
 .comments-section li:not(:last-child) {
   border-right: solid 1px #e8e8e8;
 }

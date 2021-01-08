@@ -3,6 +3,8 @@
   padding-right: 100px;
   padding-left: 100px;
   justify-content: space-between;
+  background-color: #fff;
+  border-bottom: solid #e8e8e8 1px;
 }
 
 .Nav section {
