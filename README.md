@@ -39,6 +39,12 @@ To get a local copy up and running follow these simple example steps.
 
  If you see something wrong or not working, please check [the issue tracker section](https://github.com/blackpintz/Bookstore/issues), if that problem you met is not in already opened issues then open a new issue by clicking on `new issue` button.
 
+ ## Features
+- The user can access the functions of a simple Bookstore application:
+  - Add books to the store
+  - Remove books from the store
+  - Display books in the store
+
 ## Potential Future Improvements / Ambitions
 - Currently, this only a frontend application. It can be enhanced by connecting it to a backend API for information storage.
 - Add integration to a real world API like [GoogleBooks API](https://rapidapi.com/raygorodskij/api/GoogleBooks/endpoints) in order to access data about books for the user.
