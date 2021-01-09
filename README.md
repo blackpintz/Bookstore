@@ -55,6 +55,11 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@MaryleneSawyer](https://twitter.com/MaryleneSawyer)
 - Linkedin: [Marylene Sawyer](https://www.linkedin.com/in/marylene-sawyer)
 
+## Acknowledgements
+
+- [Zeplin](https://app.zeplin.io/) for the bookstore design.
+- [Microverse](https://www.microverse.org/)
+
 ## Show your support
 
 Give a ⭐️ if you like this project!
