@@ -1,0 +1,89 @@
+.Nav {
+  display: flex;
+  padding-right: 100px;
+  padding-left: 100px;
+  justify-content: space-between;
+  background-color: #fff;
+  border-bottom: solid #e8e8e8 1px;
+  padding-top: 26px;
+  padding-bottom: 5px;
+}
+
+.Nav section {
+  display: flex;
+  width: 50%;
+  flex-grow: 1;
+}
+
+.Nav section h1 {
+  width: 240px;
+  height: 37px;
+  margin: 6px 47px 2px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.Nav section h4:nth-of-type(1) {
+  width: 59px;
+  height: 16px;
+  margin: 18px 41px 11px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.Nav section h4:nth-of-type(2) {
+  width: 105px;
+  height: 16px;
+  margin: 18px 0 11px 41px;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.Nav img {
+  height: 24px;
+  border: solid 0.5px;
+  padding: 5px;
+  border-radius: 50%;
+  margin-top: 18px;
+}
+
+.category-filter {
+  padding-top: 18px;
+  padding-bottom: 30px;
+}
+
+.Nav select {
+  padding-right: 10px;
+  margin-right: 50px;
+  height: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  cursor: pointer;
+  width: 135px;
+  padding-top: unset;
+}

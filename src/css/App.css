@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
+.form {
+  display: flex;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  background-color: #faf8f8;
+  margin-top: -35px;
+}

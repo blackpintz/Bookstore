@@ -4,23 +4,10 @@ import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook } from '../actions/index';
 import filteredBooks from '../selectors/filteredBooks';
-import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = ({ books, removeBook }) => (
   <div>
-    <CategoryFilter />
-    <table>
-      <colgroup span="4" />
-      <tbody>
-        <tr>
-          <th>ID</th>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Action</th>
-        </tr>
-        {books.map(book => <Book key={book.id} book={book} handleRemoveBook={removeBook} />)}
-      </tbody>
-    </table>
+    {books.map(book => <Book key={book.id} book={book} handleRemoveBook={removeBook} />)}
   </div>
 );
 
