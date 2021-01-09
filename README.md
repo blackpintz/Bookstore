@@ -111,6 +111,11 @@ There are two ways of contributing to this project:
     1.  Commit and push the branch you created
     1.  Raise a pull request, comparing your new created branch with our original master branch [here](https://github.com/bluette1/Bookstore)
 
+## Potential Future Improvements / Ambitions
+- Currently, this only a frontend application. It can be enhanced by connecting it to a backend API for information storage.
+- Add integration to a real world API like [GoogleBooks API](https://rapidapi.com/raygorodskij/api/GoogleBooks/endpoints) in order to access data about books for the user.
+- Make the application responsive on both mobile and desktop screen sizes.
+
 ## Author
 
 👤 **Rose Wanjohi**

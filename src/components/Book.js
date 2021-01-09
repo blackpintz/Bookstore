@@ -6,7 +6,7 @@ import '../css/Book.css';
 
 const Book = ({ book, handleRemoveBook }) => {
   const { title, category } = book;
-  const value = 0.66;
+  const value = 0.05;
   return (
     <div className="book-row">
       <div className="title-category">
